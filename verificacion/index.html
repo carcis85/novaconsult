@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NovaConsult | Verificación de cuenta</title>
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+      radial-gradient(ellipse at 80% 15%, #3659a0, transparent 50%),
+      radial-gradient(ellipse at 15% 85%, #604a99, transparent 45%),
+      linear-gradient(135deg, #101b38, #1c3057);
+    color: #1f1f1f;
+  }
+
+  .page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 440px;
+    background: white;
+    padding: 44px;
+    box-shadow: 0 12px 45px rgba(0,0,0,.25);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    font-weight: 600;
+    color: #444;
+  }
+
+  .brand-icon {
+    display: grid;
+    grid-template-columns: 10px 10px;
+    grid-template-rows: 10px 10px;
+    gap: 2px;
+  }
+
+  .brand-icon span:nth-child(1) { background: #f25022; }
+  .brand-icon span:nth-child(2) { background: #7fba00; }
+  .brand-icon span:nth-child(3) { background: #00a4ef; }
+  .brand-icon span:nth-child(4) { background: #ffb900; }
+
+  h1 {
+    font-size: 27px;
+    margin: 0 0 12px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 14px;
+    color: #616161;
+    line-height: 1.6;
+  }
+
+  .field {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    border: 1px solid #999;
+    font-size: 15px;
+    background: #f8f9fc;
+    color: #555;
+  }
+
+  button {
+    background: #0067b8;
+    color: white;
+    border: none;
+    padding: 11px 30px;
+    font-size: 15px;
+    cursor: pointer;
+    float: right;
+  }
+
+  .clear { clear: both; }
+
+  .notice {
+    display: none;
+    margin-top: 26px;
+    padding: 20px;
+    background: #f0f3ff;
+    border-left: 4px solid #685cf5;
+    line-height: 1.6;
+    font-size: 14px;
+  }
+
+  .footer {
+    margin-top: 28px;
+    font-size: 12px;
+    color: #777;
+  }
+
+  @media(max-width:500px) {
+    .card { padding: 30px 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <main class="card">
+    <div class="brand">
+      <div class="brand-icon">
+        <span></span><span></span>
+        <span></span><span></span>
+      </div>
+      Cuenta profesional · NovaConsult
+    </div>
+
+    <h1>Iniciar sesión</h1>
+    <p>Continúa con tu cuenta profesional para verificar el acceso.</p>
+
+    <input class="field" type="text"
+           value="Cuenta corporativa de demostración"
+           readonly>
+
+    <button type="button" onclick="mostrarAviso()">
+      Siguiente
+    </button>
+
+    <div class="clear"></div>
+
+    <div class="notice" id="aviso">
+      <strong>¡Has detectado una simulación de phishing!</strong>
+      <p>
+        Esta página reproduce un intento de verificación
+        de credenciales corporativas.
+      </p>
+      <p>
+        Nunca introduzcas tu contraseña en enlaces
+        inesperados recibidos por correo electrónico.
+      </p>
+      <strong>NovaConsult · Concienciación en ciberseguridad</strong>
+    </div>
+
+    <div class="footer">
+      Simulación académica · No se solicitan ni almacenan contraseñas.
+    </div>
+  </main>
+</div>
+
+<script>
+function mostrarAviso() {
+  document.getElementById("aviso").style.display = "block";
+}
+</script>
+</body>
+</html>
