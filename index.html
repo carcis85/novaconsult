@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b36">
+  <meta name="description" content="NovaConsult, consultoría tecnológica y transformación digital. Sitio demostrativo de una empresa ficticia.">
+  <title>NovaConsult | Tecnología que impulsa ideas</title>
+  <style>
+    :root{--navy:#101b36;--deep:#0c142b;--blue:#3867e8;--sky:#8bd8f9;--purple:#8573ea;--ink:#243350;--muted:#63708a;--surface:#f6f8fe;--line:#e4e9f4;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit} button{font:inherit}
+    .wrap{width:min(1140px,calc(100% - 44px));margin:auto}
+    header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:11px;font-size:21px;font-weight:800;letter-spacing:-.7px;color:var(--navy)}
+    .mark{width:39px;height:39px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--purple));box-shadow:0 7px 16px #3867e829;color:#fff;font-weight:900;font-size:25px;transform:rotate(-6deg)}
+    .mark span{transform:rotate(6deg)} .brand strong{color:var(--blue)}
+    nav{display:flex;align-items:center;gap:33px;font-size:14px;font-weight:650}nav a:not(.btn):hover{color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:11px;padding:12px 21px;font-weight:750;font-size:14px;transition:transform .2s,box-shadow .2s}
+    .btn:hover{transform:translateY(-2px)}.primary{color:#fff;background:var(--blue);box-shadow:0 9px 24px #3867e833}.outline{color:#fff;border:1px solid #ffffff6b}
+    .hero{background:radial-gradient(ellipse at 79% 22%,#395bab66 0%,transparent 43%),radial-gradient(ellipse at 50% 95%,#5349982e 0%,transparent 48%),linear-gradient(115deg,#0d1830,#15274d 75%,#172c58);color:#fff;overflow:hidden}
+    .hero-grid{min-height:580px;display:grid;grid-template-columns:1.07fr .93fr;align-items:center;gap:55px;padding:68px 0 90px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:850;color:#a6bbff}
+    .eyebrow:before{content:"";width:25px;height:2px;background:#8dd8f4;display:block}
+    h1{font-size:clamp(41px,5vw,67px);line-height:1.11;letter-spacing:-2.6px;margin:21px 0 23px;font-weight:850}
+    h1 em{font-style:normal;background:linear-gradient(90deg,#9dcaff,#a89cf8);color:transparent;background-clip:text}
+    .lead{font-size:17px;color:#cad4e9;max-width:540px;margin:0 0 33px}.actions{display:flex;flex-wrap:wrap;gap:13px}
+    .hero-art{height:385px;position:relative;display:grid;place-items:center}.orb{position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle at 34% 26%,#8bd8f951,#4653d724 52%,transparent 73%);border:1px solid #8ba8e32f;box-shadow:0 0 0 35px #b6c3ff08,0 0 0 73px #b6c3ff06}
+    .dashboard{position:relative;width:min(430px,100%);border-radius:17px;overflow:hidden;background:#f8faff;box-shadow:0 25px 65px #070d23a1;transform:rotate(-5deg);border:1px solid #e8eeff}
+    .dash-top{height:40px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 17px}.dot{width:8px;height:8px;background:#d5ddec;border-radius:50%}.dot:first-child{background:#fa9c9c}.dot:nth-child(2){background:#ffd48f}.dot:nth-child(3){background:#91d8c1}
+    .dash-main{padding:24px;color:var(--ink)}.dash-title{font-weight:800;font-size:16px;margin-bottom:4px}.dash-sub{font-size:11px;color:#8995ad}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:19px 0}.metric{background:#fff;border:1px solid #e7ecf7;border-radius:10px;padding:12px}.metric b{display:block;color:#243a6e;font-size:20px}.metric small{font-size:10px;color:#8491a8}.graph{height:125px;border-radius:11px;background:linear-gradient(180deg,#f0f4ff,#fff);border:1px solid #e7ecf7;padding:15px}.graph svg{width:100%;height:100%}.floating{position:absolute;right:-16px;bottom:12px;padding:12px 17px;background:#fff;color:#23437f;border-radius:12px;box-shadow:0 15px 35px #0003;font-size:12px;font-weight:800;transform:rotate(5deg)}
+    .trust{background:#f8faff;border-bottom:1px solid var(--line)}.trust-inner{padding:25px 0;display:flex;justify-content:center;align-items:center;gap:27px;color:#71809c;font-size:13px;font-weight:650;text-align:center}.trust b{color:#243a67}
+    section{padding:94px 0}.section-head{text-align:center;margin-bottom:49px}.section-head h2,.about h2,.contact h2{font-size:clamp(31px,3.2vw,42px);letter-spacing:-1.2px;line-height:1.18;color:var(--navy);margin:14px 0}.section-head p{color:var(--muted);max-width:640px;margin:0 auto;font-size:16px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{border:1px solid var(--line);border-radius:19px;padding:29px;background:#fff;box-shadow:0 13px 35px #18305d08}.card:hover{box-shadow:0 17px 40px #18305d15}.symbol{width:53px;height:53px;border-radius:14px;background:#ecf1ff;color:var(--blue);display:grid;place-items:center;font-size:25px;margin-bottom:24px}.card h3{margin:0 0 8px;font-size:19px;color:var(--navy)}.card p{margin:0;color:var(--muted);font-size:14px}
+    .about{background:var(--surface)}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.about-panel{min-height:325px;border-radius:23px;background:linear-gradient(145deg,#152b59,#465cba);padding:30px;position:relative;overflow:hidden;color:#fff}.about-panel:before{content:"";width:280px;height:280px;border:1px solid #ffffff25;position:absolute;right:-65px;top:-90px;border-radius:50%;box-shadow:0 0 0 48px #ffffff08,0 0 0 92px #ffffff08}.about-panel .small{font-size:12px;color:#d6dcff;letter-spacing:1.5px;font-weight:750}.about-panel .big{position:absolute;bottom:30px;left:30px;font-size:52px;line-height:1.05;font-weight:850;letter-spacing:-2px}.about-panel .big span{color:#a7e9ff}.about p{color:var(--muted)}.ticks{list-style:none;padding:0;margin:24px 0 0}.ticks li{margin:12px 0;font-size:14px;font-weight:650}.ticks li:before{content:"✓";color:var(--blue);margin-right:12px;font-weight:900}
+    .contact{background:#fff}.contact-box{border:1px solid #dce5fb;background:linear-gradient(110deg,#f5f8ff,#eff4ff);padding:47px;border-radius:22px;display:flex;align-items:center;justify-content:space-between;gap:25px}.contact h2{margin:0 0 12px}.contact p{margin:0;color:var(--muted);max-width:560px}.contact-note{font-size:12px;color:var(--muted);margin-top:14px}
+    footer{background:var(--deep);color:#9eaecb;padding:33px 0}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:12px}.footer-brand{color:#fff;font-weight:800;font-size:17px}
+    .demo-label{background:#e8edff;color:#46548e;font-size:11px;font-weight:700;padding:7px 12px;border-radius:50px}
+    @media(max-width:800px){nav{gap:14px}nav a:not(.btn){display:none}.hero-grid{grid-template-columns:1fr;gap:10px;padding:72px 0}.hero-art{height:350px}.cards{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr;gap:30px}.trust-inner{flex-wrap:wrap}.contact-box{flex-direction:column;align-items:flex-start}}
+    @media(max-width:450px){.wrap{width:min(100% - 30px,1140px)}.nav{min-height:70px}.brand{font-size:18px}.brand .mark{width:33px;height:33px}.nav .btn{padding:10px 12px;font-size:12px}h1{letter-spacing:-1.6px}.hero-art{height:300px}.dashboard{width:93%}.floating{right:0}.contact-box{padding:27px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="NovaConsult, inicio"><span class="mark"><span>N</span></span><span>Nova<strong>Consult</strong></span></a>
+      <nav aria-label="Navegación principal"><a href="#servicios">Servicios</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a><a class="btn primary" href="#contacto">Hablemos</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Consultoría tecnológica y digital</span>
+          <h1>El futuro de tu empresa <em>empieza hoy.</em></h1>
+          <p class="lead">Acompañamos a las organizaciones en su transformación digital con soluciones que combinan innovación, confianza y visión estratégica.</p>
+          <div class="actions"><a class="btn primary" href="#servicios">Descubre nuestros servicios ↗</a><a class="btn outline" href="#nosotros">Conoce NovaConsult</a></div>
+        </div>
+        <div class="hero-art" aria-label="Ilustración de un panel de analítica empresarial">
+          <div class="orb"></div>
+          <div class="dashboard">
+            <div class="dash-top"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+            <div class="dash-main">
+              <div class="dash-title">Panorama digital</div><div class="dash-sub">Vista general · Transformación empresarial</div>
+              <div class="metrics"><div class="metric"><b>+38%</b><small>Eficiencia</small></div><div class="metric"><b>24/7</b><small>Continuidad</small></div><div class="metric"><b>360°</b><small>Visión integral</small></div></div>
+              <div class="graph"><svg viewBox="0 0 350 90" role="img" aria-label="Gráfico ilustrativo de crecimiento"><defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#426aef" stop-opacity=".22"/><stop offset="1" stop-color="#426aef" stop-opacity="0"/></linearGradient></defs><path d="M0 75 L40 62 L80 65 L120 42 L158 49 L205 30 L249 36 L295 13 L350 5 L350 90 L0 90Z" fill="url(#area)"/><path d="M0 75 L40 62 L80 65 L120 42 L158 49 L205 30 L249 36 L295 13 L350 5" fill="none" stroke="#426aef" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="295" cy="13" r="5" fill="#426aef"/></svg></div>
+            </div>
+          </div>
+          <div class="floating">✦ Innovación en movimiento</div>
+        </div>
+      </div>
+    </section>
+    <div class="trust"><div class="wrap trust-inner"><b>Soluciones pensadas para empresas que avanzan</b><span>◆ Estrategia</span><span>◆ Tecnología</span><span>◆ Confianza</span></div></div>
+    <section id="servicios"><div class="wrap"><div class="section-head"><span class="eyebrow" style="color:#546ee0">Qué hacemos</span><h2>Tecnología con propósito</h2><p>Convertimos retos de negocio en oportunidades a través de soluciones adaptadas a cada organización.</p></div><div class="cards">
+      <article class="card"><div class="symbol">◇</div><h3>Transformación digital</h3><p>Modernización de procesos, herramientas y equipos para trabajar de forma más ágil, conectada y eficiente.</p></article>
+      <article class="card"><div class="symbol">▣</div><h3>Soluciones cloud</h3><p>Asesoramiento en entornos colaborativos y servicios en la nube que impulsan la productividad.</p></article>
+      <article class="card"><div class="symbol">⬡</div><h3>Ciberseguridad</h3><p>Buenas prácticas, análisis de riesgos y concienciación para proteger los activos de cada empresa.</p></article>
+    </div></div></section>
+    <section class="about" id="nosotros"><div class="wrap about-grid"><div class="about-panel"><div class="small">NUESTRA FORMA DE TRABAJAR</div><div class="big">Personas.<br>Tecnología.<br><span>Resultados.</span></div></div><div><span class="eyebrow" style="color:#546ee0">Quiénes somos</span><h2>Una visión clara para retos complejos.</h2><p>NovaConsult es una consultora tecnológica ficticia que acompaña a empresas en la adopción de herramientas digitales, la mejora de sus procesos y la protección de su información.</p><p>Creemos en una tecnología útil, cercana y diseñada alrededor de las personas.</p><ul class="ticks"><li>Orientación a soluciones prácticas</li><li>Colaboración entre equipos y departamentos</li><li>Compromiso con la seguridad y la innovación</li></ul></div></div></section>
+    <section class="contact" id="contacto"><div class="wrap"><div class="contact-box"><div><span class="eyebrow" style="color:#546ee0">Conversemos</span><h2>Construyamos lo que viene.</h2><p>¿Tienes un proyecto en mente? Nuestro equipo puede ayudarte a dar el siguiente paso.</p><div class="contact-note">Contacto de demostración: hola@novaconsult.example</div></div><a class="btn primary" href="mailto:hola@novaconsult.example">Contactar ↗</a></div></div></section>
+  </main>
+  <footer><div class="wrap footer-row"><span class="footer-brand">NovaConsult.</span><span>© 2026 NovaConsult · Identidad ficticia para práctica académica</span><span class="demo-label">Sitio de demostración</span></div></footer>
+</body>
+</html>
