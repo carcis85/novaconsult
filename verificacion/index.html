@@ -1,162 +1,167 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NovaConsult | Simulación de phishing</title>
+<title>NovaConsult | Concienciación en Ciberseguridad</title>
 <style>
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background:
-    radial-gradient(ellipse at 80% 15%, #3659a0, transparent 50%),
-    radial-gradient(ellipse at 15% 85%, #604a99, transparent 45%),
-    linear-gradient(135deg, #101b38, #1c3057);
-  color: #1b2848;
-}
-.page {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 25px;
-}
-.card {
-  background: #fff;
-  width: 100%;
-  max-width: 620px;
-  padding: 42px;
-  border-radius: 12px;
-  box-shadow: 0 15px 45px rgba(0,0,0,.25);
-  text-align: center;
-}
-.brand {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-.brand span {
-  color: #685cf5;
-}
-.warning-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: #fff0f2;
-  color: #e84561;
-  font-size: 55px;
-  font-weight: bold;
-  line-height: 80px;
-  margin: 0 auto 20px;
-}
-h1 {
-  font-size: 30px;
-  color: #e84561;
-  margin: 15px 0;
-}
-h2 {
-  font-size: 21px;
-  margin: 15px 0;
-}
-p {
-  font-size: 15px;
-  color: #536178;
-  line-height: 1.7;
-}
-.notice {
-  margin-top: 28px;
-  padding: 20px;
-  background: #eaf5ee;
-  border-radius: 8px;
-}
-.notice strong {
-  color: #167748;
-  font-size: 17px;
-}
-.tips {
-  text-align: left;
-  margin-top: 28px;
-  padding: 22px;
-  background: #f0f3ff;
-  border-left: 4px solid #685cf5;
-  border-radius: 4px;
-}
-.tips h3 {
-  margin-top: 0;
-  color: #17284b;
-}
-.tips li {
-  margin-bottom: 12px;
-  line-height: 1.5;
-}
-.footer {
-  margin-top: 30px;
-  font-size: 12px;
-  color: #8993a5;
-}
-@media(max-width:520px) {
-  .card { padding: 28px 20px; }
-  h1 { font-size: 25px; }
-}
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+      radial-gradient(circle at 85% 15%, #344b91, transparent 45%),
+      linear-gradient(135deg, #0e1934, #172b51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    color: #26344c;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 700px;
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,.3);
+  }
+
+  .header {
+    background: #111d3a;
+    color: white;
+    padding: 26px 35px;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .header span {
+    color: #9085ff;
+  }
+
+  .content {
+    padding: 38px;
+  }
+
+  .icon {
+    width: 65px;
+    height: 65px;
+    background: #eef0ff;
+    color: #685cf5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 22px;
+  }
+
+  h1 {
+    font-size: 27px;
+    color: #17284b;
+    margin: 0 0 18px;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #536178;
+  }
+
+  .notice {
+    background: #f0f3ff;
+    border-left: 4px solid #685cf5;
+    padding: 20px;
+    margin: 25px 0;
+  }
+
+  .notice strong {
+    color: #263d88;
+  }
+
+  ul {
+    padding-left: 22px;
+    line-height: 2;
+    color: #44536d;
+    font-size: 14px;
+  }
+
+  .footer {
+    background: #f5f7fb;
+    padding: 20px;
+    color: #8993a5;
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px solid #e2e7f0;
+  }
+
+  @media(max-width:550px) {
+    .content { padding: 25px; }
+    h1 { font-size: 23px; }
+  }
 </style>
 </head>
-
 <body>
-<div class="page">
-  <main class="card">
 
-    <div class="brand">
-      <span>N</span>ovaConsult
-    </div>
+<div class="card">
 
-    <div class="warning-icon">!</div>
+  <header class="header">
+    <span>N</span>ovaConsult
+  </header>
 
-    <h1>¡HAS CAÍDO EN UNA SIMULACIÓN DE PHISHING!</h1>
+  <main class="content">
 
-    <h2>¿Y si este correo hubiera sido real?</h2>
+    <div class="icon">🛡</div>
 
-    <p>
-      Has accedido a un enlace incluido en un correo
-      electrónico que simulaba una comunicación corporativa.
-    </p>
+    <h1>¡Has participado en una simulación de phishing!</h1>
 
     <p>
-      Los ciberdelincuentes utilizan mensajes urgentes,
-      identidades de empresas conocidas y páginas
-      aparentemente legítimas para engañar a los usuarios.
+      El mensaje que has recibido formaba parte de una
+      campaña de concienciación en ciberseguridad
+      realizada por el Departamento de Sistemas de NovaConsult.
     </p>
 
     <div class="notice">
-      <strong>TRANQUILIDAD: ESTO ES UN SIMULACRO</strong>
+      <strong>¿Qué acaba de ocurrir?</strong>
       <p>
-        Esta actividad forma parte de una práctica académica
-        de concienciación en ciberseguridad.
-        No se han solicitado ni almacenado contraseñas.
+        Has seguido un enlace que simulaba una solicitud
+        de verificación de credenciales corporativas.
+        En un ataque real, una página de este tipo podría
+        utilizarse para robar tu usuario y contraseña.
       </p>
     </div>
 
-    <div class="tips">
-      <h3>¿Cómo puedes evitar caer en un phishing?</h3>
-      <ul>
-        <li>Comprueba la dirección real del remitente.</li>
-        <li>Desconfía de mensajes que generan urgencia.</li>
-        <li>Revisa la dirección de los enlaces antes de abrirlos.</li>
-        <li>No introduzcas contraseñas en páginas sospechosas.</li>
-        <li>Verifica las solicitudes por un canal oficial.</li>
-      </ul>
-    </div>
+    <h2>¿Cómo puedes protegerte?</h2>
 
-    <div class="footer">
-      © 2026 NovaConsult<br>
-      Simulación académica · Concienciación en ciberseguridad
-    </div>
+    <ul>
+      <li>Comprueba la dirección real del remitente.</li>
+      <li>Desconfía de los mensajes que generan urgencia.</li>
+      <li>Verifica la URL antes de introducir credenciales.</li>
+      <li>No compartas contraseñas ni códigos de verificación.</li>
+      <li>Comunica los mensajes sospechosos al equipo de seguridad.</li>
+    </ul>
+
+    <p>
+      <strong>Recuerda:</strong> ante cualquier duda,
+      accede a los servicios corporativos desde sus
+      direcciones oficiales, nunca desde enlaces inesperados.
+    </p>
 
   </main>
+
+  <footer class="footer">
+    © 2026 NovaConsult · Departamento de Ciberseguridad
+    · Simulación académica
+  </footer>
+
 </div>
+
 </body>
 </html>
+
