@@ -4,160 +4,159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NovaConsult | Verificación de cuenta</title>
+<title>NovaConsult | Simulación de phishing</title>
 <style>
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background:
-      radial-gradient(ellipse at 80% 15%, #3659a0, transparent 50%),
-      radial-gradient(ellipse at 15% 85%, #604a99, transparent 45%),
-      linear-gradient(135deg, #101b38, #1c3057);
-    color: #1f1f1f;
-  }
-
-  .page {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 440px;
-    background: white;
-    padding: 44px;
-    box-shadow: 0 12px 45px rgba(0,0,0,.25);
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 28px;
-    font-weight: 600;
-    color: #444;
-  }
-
-  .brand-icon {
-    display: grid;
-    grid-template-columns: 10px 10px;
-    grid-template-rows: 10px 10px;
-    gap: 2px;
-  }
-
-  .brand-icon span:nth-child(1) { background: #f25022; }
-  .brand-icon span:nth-child(2) { background: #7fba00; }
-  .brand-icon span:nth-child(3) { background: #00a4ef; }
-  .brand-icon span:nth-child(4) { background: #ffb900; }
-
-  h1 {
-    font-size: 27px;
-    margin: 0 0 12px;
-    font-weight: 600;
-  }
-
-  p {
-    font-size: 14px;
-    color: #616161;
-    line-height: 1.6;
-  }
-
-  .field {
-    width: 100%;
-    padding: 12px;
-    margin: 20px 0;
-    border: 1px solid #999;
-    font-size: 15px;
-    background: #f8f9fc;
-    color: #555;
-  }
-
-  button {
-    background: #0067b8;
-    color: white;
-    border: none;
-    padding: 11px 30px;
-    font-size: 15px;
-    cursor: pointer;
-    float: right;
-  }
-
-  .clear { clear: both; }
-
-  .notice {
-    display: none;
-    margin-top: 26px;
-    padding: 20px;
-    background: #f0f3ff;
-    border-left: 4px solid #685cf5;
-    line-height: 1.6;
-    font-size: 14px;
-  }
-
-  .footer {
-    margin-top: 28px;
-    font-size: 12px;
-    color: #777;
-  }
-
-  @media(max-width:500px) {
-    .card { padding: 30px 24px; }
-  }
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:
+    radial-gradient(ellipse at 80% 15%, #3659a0, transparent 50%),
+    radial-gradient(ellipse at 15% 85%, #604a99, transparent 45%),
+    linear-gradient(135deg, #101b38, #1c3057);
+  color: #1b2848;
+}
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+.card {
+  background: #fff;
+  width: 100%;
+  max-width: 620px;
+  padding: 42px;
+  border-radius: 12px;
+  box-shadow: 0 15px 45px rgba(0,0,0,.25);
+  text-align: center;
+}
+.brand {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.brand span {
+  color: #685cf5;
+}
+.warning-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fff0f2;
+  color: #e84561;
+  font-size: 55px;
+  font-weight: bold;
+  line-height: 80px;
+  margin: 0 auto 20px;
+}
+h1 {
+  font-size: 30px;
+  color: #e84561;
+  margin: 15px 0;
+}
+h2 {
+  font-size: 21px;
+  margin: 15px 0;
+}
+p {
+  font-size: 15px;
+  color: #536178;
+  line-height: 1.7;
+}
+.notice {
+  margin-top: 28px;
+  padding: 20px;
+  background: #eaf5ee;
+  border-radius: 8px;
+}
+.notice strong {
+  color: #167748;
+  font-size: 17px;
+}
+.tips {
+  text-align: left;
+  margin-top: 28px;
+  padding: 22px;
+  background: #f0f3ff;
+  border-left: 4px solid #685cf5;
+  border-radius: 4px;
+}
+.tips h3 {
+  margin-top: 0;
+  color: #17284b;
+}
+.tips li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.footer {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #8993a5;
+}
+@media(max-width:520px) {
+  .card { padding: 28px 20px; }
+  h1 { font-size: 25px; }
+}
 </style>
 </head>
+
 <body>
 <div class="page">
   <main class="card">
+
     <div class="brand">
-      <div class="brand-icon">
-        <span></span><span></span>
-        <span></span><span></span>
-      </div>
-      Cuenta profesional · NovaConsult
+      <span>N</span>ovaConsult
     </div>
 
-    <h1>Iniciar sesión</h1>
-    <p>Continúa con tu cuenta profesional para verificar el acceso.</p>
+    <div class="warning-icon">!</div>
 
-    <input class="field" type="text"
-           value="Cuenta corporativa de demostración"
-           readonly>
+    <h1>¡HAS CAÍDO EN UNA SIMULACIÓN DE PHISHING!</h1>
 
-    <button type="button" onclick="mostrarAviso()">
-      Siguiente
-    </button>
+    <h2>¿Y si este correo hubiera sido real?</h2>
 
-    <div class="clear"></div>
+    <p>
+      Has accedido a un enlace incluido en un correo
+      electrónico que simulaba una comunicación corporativa.
+    </p>
 
-    <div class="notice" id="aviso">
-      <strong>¡Has detectado una simulación de phishing!</strong>
+    <p>
+      Los ciberdelincuentes utilizan mensajes urgentes,
+      identidades de empresas conocidas y páginas
+      aparentemente legítimas para engañar a los usuarios.
+    </p>
+
+    <div class="notice">
+      <strong>TRANQUILIDAD: ESTO ES UN SIMULACRO</strong>
       <p>
-        Esta página reproduce un intento de verificación
-        de credenciales corporativas.
+        Esta actividad forma parte de una práctica académica
+        de concienciación en ciberseguridad.
+        No se han solicitado ni almacenado contraseñas.
       </p>
-      <p>
-        Nunca introduzcas tu contraseña en enlaces
-        inesperados recibidos por correo electrónico.
-      </p>
-      <strong>NovaConsult · Concienciación en ciberseguridad</strong>
+    </div>
+
+    <div class="tips">
+      <h3>¿Cómo puedes evitar caer en un phishing?</h3>
+      <ul>
+        <li>Comprueba la dirección real del remitente.</li>
+        <li>Desconfía de mensajes que generan urgencia.</li>
+        <li>Revisa la dirección de los enlaces antes de abrirlos.</li>
+        <li>No introduzcas contraseñas en páginas sospechosas.</li>
+        <li>Verifica las solicitudes por un canal oficial.</li>
+      </ul>
     </div>
 
     <div class="footer">
-      Simulación académica · No se solicitan ni almacenan contraseñas.
+      © 2026 NovaConsult<br>
+      Simulación académica · Concienciación en ciberseguridad
     </div>
+
   </main>
 </div>
-
-<script>
-function mostrarAviso() {
-  document.getElementById("aviso").style.display = "block";
-}
-</script>
 </body>
 </html>
